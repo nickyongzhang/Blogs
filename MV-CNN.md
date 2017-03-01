@@ -68,7 +68,8 @@ Methodology
 
 如下证明过程证明了complementary principle的有效性
 
-<!-- ![framework](https://raw.githubusercontent.com/nickzylove/Blogs/master/MV-CNN_files/figure-markdown_github/theorem_proof.png) -->
+![framework](https://raw.githubusercontent.com/nickzylove/Blogs/master/MV-CNN_files/figure-markdown_github/theorem_proof.png)
+
 ### Concensus Principle
 
 \[2\] 的作者证明两个独立假设的不一致性是每个假设的错误率的上限，用公式来将就是：

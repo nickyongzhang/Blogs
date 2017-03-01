@@ -1,7 +1,10 @@
 MV-CNN for extractive document summarization
 ================
 
-@author: Yong Zhang, PhD instituion: Nanyang Technological Univieristy email: <yzhang067@e.ntu.edu.sg> licence: MIT licensed. No commercial usage.
+author: Yong Zhang, PhD
+instituion: Nanyang Technological Univieristy
+email: <yzhang067@e.ntu.edu.sg>
+licence: MIT licensed. No commercial usage.
 
 引子
 ----
@@ -114,17 +117,30 @@ Experiment Results
 
 我们在DUC的五个dataset上检验了我们model的有效性，并与state-of-art的方法做了对比，结果如下图。我们在所有dataset上都取得了最优的结果
 
-![comparison](https://raw.githubusercontent.com/nickzylove/Blogs/master/MV-CNN_files/figure-markdown_github/experiment_result.png)
+![comparison](https://raw.githubusercontent.com/nickzylove/Blogs/master/MV-CNN_files/figure-markdown_github/experiment_result.jpg)
 
 另外我们也验证了complementary和concensus principles的有效性, 从图3--5， 我们可以看到同时使用two-level compelmentary principle和concensus principle有助于提高学习能力。句子位置信息的重要性由图6中的结果证明。
 
-![principle](https://raw.githubusercontent.com/nickzylove/Blogs/master/MV-CNN_files/figure-markdown_github/experiment_result.png)
+![principle](https://raw.githubusercontent.com/nickzylove/Blogs/master/MV-CNN_files/figure-markdown_github/principle_pos.png)
 
 如果偶然间有读者看到此文，欢迎讨论。如需引用，参考以下。
 
-> @ARTICLE{7756666, author={Y. Zhang and M. J. Er and R. Zhao and M. Pratama}, journal={IEEE Transactions on Cybernetics}, title={Multiview Convolutional Neural Networks for Multidocument Extractive Summarization}, year={2016}, volume={PP}, number={99}, pages={1-13}, keywords={Computational modeling;Computer vision;Data mining;Feature extraction;Machine learning;Neural networks;Semantics;Convolutional neural networks (CNNs);deep learning;multidocument summarization (MDS);multiview learning;word embedding}, doi={10.1109/TCYB.2016.2628402}, ISSN={2168-2267}, month={},}
+> @ARTICLE{7756666,
+> author={Y. Zhang and M. J. Er and R. Zhao and M. Pratama},
+> journal={IEEE Transactions on Cybernetics},
+> title={Multiview Convolutional Neural Networks for Multidocument Extractive Summarization},
+> year={2016},
+> volume={PP},
+> number={99},
+> pages={1-13},
+> keywords={Computational modeling;Computer vision;Data mining;Feature extraction;Machine learning;Neural networks;Semantics;Convolutional neural networks (CNNs);deep learning;multidocument summarization (MDS);multiview learning;word embedding},
+> doi={10.1109/TCYB.2016.2628402},
+> ISSN={2168-2267},
+> month={},}
 
 Reference
 ---------
 
-\[1\] C. Xu, D. Tao, and C. Xu, “A survey on multi-view learning,” Neural Comput. Appl., vol. 23, nos. 7–8, pp. 2031–2038, 2013. \[2\] S. Dasgupta, M. L. Littman, and D. McAllester, “PAC generalization bounds for co-training,” in Proc. Adv. Neural Inf. Process. Syst., vol. 1. Vancouver, BC, Canada, pp. 375–382, 2001.
+\[1\] C. Xu, D. Tao, and C. Xu, “A survey on multi-view learning,” Neural Comput. Appl., vol. 23, nos. 7–8, pp. 2031–2038, 2013.
+
+\[2\] S. Dasgupta, M. L. Littman, and D. McAllester, “PAC generalization bounds for co-training,” in Proc. Adv. Neural Inf. Process. Syst., vol. 1. Vancouver, BC, Canada, pp. 375–382, 2001.

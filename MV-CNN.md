@@ -1,10 +1,10 @@
 MV-CNN for extractive document summarization
 ================
 
-author: Yong Zhang, PhD
-instituion: Nanyang Technological Univieristy
+author: Yong Zhang, Ph.D.
+institution: Nanyang Technological University
 email: <yzhang067@e.ntu.edu.sg>
-licence: MIT licensed. No commercial usage.
+licence: MIT licensed. No commercial usage
 
 引子
 ----
@@ -125,8 +125,8 @@ Experiment Results
 
 如果偶然间有读者看到此文，欢迎讨论。如需引用，参考以下。
 
-> @ARTICLE{7756666,
-> author={Y. Zhang and M. J. Er and R. Zhao and M. Pratama},
+> @ARTICLE{7756666, 
+> author={Y. Zhang and M. J. Er and R. Zhao and M. Pratama}, 
 > journal={IEEE Transactions on Cybernetics},
 > title={Multiview Convolutional Neural Networks for Multidocument Extractive Summarization},
 > year={2016},

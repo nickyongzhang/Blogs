@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 文档摘要
 信息爆炸时代如何快速提取到有用信息非常重要，文档摘要作为信息提取领域的重要技术，长期以来一直备受关注，近年来随着机器学习的火热，越来越多的人尝试用机器学习来解决这一问题。文档摘要主要有两个分支：extractive summarization和abstractive summarization。前者直接提取文档活文集里的句子组合成最终的摘要，后者还需要做语法检查，语义重组等复杂处理。后者提取到的摘要与人工摘要更加类似，但是技术性复杂，本文focus在extractive summarization。我们首先将文档或文集分割成句子，然后利用我们的模型对每个句子建模并打分，之后根据句子得分排序，取分数居前的句子组合成最终摘要。最后的摘要有字数上线或者句子数目上限。此处值得提到的是，对于文集摘要任务，来自不同文档的句子可能十分相同（任务是针对相同topic的文档提取摘要）而且同时得分很高，我们将剔除重复性句子。
-
+![framework](https://raw.githubusercontent.com/nickzylove/Blogs/master/MV-CNN_files/figure-markdown_github/framework.png)
 
 
 

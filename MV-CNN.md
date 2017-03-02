@@ -25,7 +25,9 @@ licence: MIT licensed. No commercial usage
 文档摘要
 --------
 
-信息爆炸时代如何快速提取到有用信息非常重要，文档摘要作为信息提取领域的重要技术，长期以来一直备受关注，近年来随着机器学习的火热，越来越多的人尝试用机器学习来解决这一问题。文档摘要主要有两个分支：extractive summarization和abstractive summarization。前者直接提取文档活文集里的句子组合成最终的摘要，后者还需要做语法检查，语义重组等复杂处理。后者提取到的摘要与人工摘要更加类似，但是技术性复杂，本文focus在extractive summarization。我们首先将文档或文集分割成句子，然后利用我们的模型对每个句子建模并打分，之后根据句子得分排序，取分数居前的句子组合成最终摘要。最后的摘要有字数上线或者句子数目上限。此处值得提到的是，对于文集摘要任务，来自不同文档的句子可能十分相同（任务是针对相同topic的文档提取摘要）而且同时得分很高，我们将剔除重复性句子。完整的流程如下图： ![flowchart](https://raw.githubusercontent.com/nickzylove/Blogs/master/MV-CNN_files/figure-markdown_github/framework.png)
+信息爆炸时代如何快速提取到有用信息非常重要，文档摘要作为信息提取领域的重要技术，长期以来一直备受关注，近年来随着机器学习的火热，越来越多的人尝试用机器学习来解决这一问题。文档摘要主要有两个分支：extractive summarization和abstractive summarization。前者直接提取文档活文集里的句子组合成最终的摘要，后者还需要做语法检查，语义重组等复杂处理。后者提取到的摘要与人工摘要更加类似，但是技术性复杂，本文focus在extractive summarization。我们首先将文档或文集分割成句子，然后利用我们的模型对每个句子建模并打分，之后根据句子得分排序，取分数居前的句子组合成最终摘要。最后的摘要有字数上线或者句子数目上限。此处值得提到的是，对于文集摘要任务，来自不同文档的句子可能十分相同（任务是针对相同topic的文档提取摘要）而且同时得分很高，我们将剔除重复性句子。完整的流程如下图：
+
+![flowchart](https://raw.githubusercontent.com/nickzylove/Blogs/master/MV-CNN_files/figure-markdown_github/framework.png)
 
 CNN
 ---
@@ -78,7 +80,8 @@ Methodology
 \[2\] 的作者证明两个独立假设的不一致性是每个假设的错误率的上限，用公式来将就是：
 
 *P*(*f*<sub>1</sub> ≠ *f*<sub>2</sub>)≥*m**a**x*(*P*(*e**r**r**o**r*(*f*<sub>1</sub>)), *P*(*e**r**r**o**r*(*f*<sub>2</sub>)))
- 因此提高两个假设之间的一致性可以减少各个假设的错误率。应用到我们的模型，降低各个CNN的不一致性有利于提高各个CNN的学习能力。假设各个CNN预测的sentence的分数为*f*<sub>*i*</sub>(**x**). 那么concensus principle可以表示为
+
+因此提高两个假设之间的一致性可以减少各个假设的错误率。应用到我们的模型，降低各个CNN的不一致性有利于提高各个CNN的学习能力。假设各个CNN预测的sentence的分数为*f*<sub>*i*</sub>(**x**). 那么concensus principle可以表示为
 
 *m**i**n*∑<sub>**x**</sub>∑<sub>*i* ≠ *j*</sub>(*f*<sub>*i*</sub>(**x**)−*f*<sub>*j*</sub>(**x**))<sup>2</sup>
 

@@ -45,9 +45,9 @@ Attention是近年来比较热门的一个方向，它最初源于computer visio
 <center>
 <img src="https://raw.githubusercontent.com/nickzylove/Blogs/master/apcnn_files/figure-markdown_github/framework.png" width="500px">
 </center>
-让我们假设CNN得到句子表示为*c* = \[*c*<sub>1</sub>,*c*<sub>2</sub>,⋯,*c*<sub>*T*</sub>\] ∈ ℝ<sup>*k* × *T*</sup>（这是pooling以前，所以是个matrix）。k是filter的数目，T是句子的长度。我们在做convolution时选择了\`same'模式，意即convlution前后输入和输出的长度相同。 同时我们假设BLSTM得到的句子向量表示为$\\widetilde{s}$。我们将$\\widetilde{s}$和*c*<sub>*i*</sub>映射到同一个空间就可以对他们进行比较从而得到CNN的局部向量的attention weights了。我们这里使用了cosine similarity进行比较。
+让我们假设CNN得到句子表示为*c* = \[*c*<sub>1</sub>,*c*<sub>2</sub>,⋯,*c*<sub>*T*</sub>\] ∈ ℝ<sup>*k* × *T*</sup>（这是pooling以前，所以是个matrix）。k是filter的数目，T是句子的长度。我们在做convolution时选择了\`same'模式，意即convlution前后输入和输出的长度相同。 同时我们假设BLSTM得到的句子向量表示为*s*′。我们将*s*′和*c*<sub>*i*</sub>映射到同一个空间就可以对他们进行比较从而得到CNN的局部向量的attention weights了。我们这里使用了cosine similarity进行比较。
 
-$$e\_i = sim(c\_i, \\widetilde{s})$$
+*e*<sub>*i*</sub> = *s**i**m*(*c*<sub>*i*</sub>, *s*′)
 
 $$\\alpha\_i = \\frac{exp(e\_{i})}{\\sum\_{i=1}^{T}exp(e\_i)}$$
 
